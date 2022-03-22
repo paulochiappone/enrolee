@@ -1,0 +1,90 @@
+/* ----Google FONTS---- */
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;500;600&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  padding: 0 auto;
+  margin: 0 auto;
+  font-family: "Poppins";
+}
+
+/* ----GENERAL CSS---- */
+:root {
+  --first-color: hsl(174, 48%, 70%);
+  --secondary-color: hsl(213, 57%, 68%);
+  --second-color: hsl(25, 78%, 78%);
+  --third-color: hsl(245, 89%, 65%);
+  --background-color: hsl(200, 23%, 97%);
+  --title-color: hsl(208, 25%, 22%);
+  --subtitle-color: hsl(245, 89%, 65%);
+}
+
+/* ----HEADER---- */
+
+.header {
+  background-color: var(--first-color);
+}
+.container {
+  display: flex;
+  width: 2200px;
+  margin-left: -310px;
+  align-items: center;
+  height: 70px;
+}
+.icon {
+  font-family: "Mukta";
+  font-weight: 1000;
+  font-size: 40px;
+  color: var(--title-color);
+}
+
+.link_head_1 {
+  text-decoration: none;
+  color: var(--third-color);
+}
+.link_head_1:hover {
+  color: var(--background-color);
+}
+.link_head_2 {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+.link_head_2:hover {
+  color: var(--third-color);
+}
+
+.btns_head {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  align-items: center;
+}
+
+.btn_sign {
+  background-color: white;
+  border: 2.5px solid var(--secondary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  height: 40px;
+  width: 110px;
+}
+
+.btn_sign:hover {
+  background-color: var(--third-color);
+}
+
+.btn_log {
+  background-color: var(--third-color);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  height: 40px;
+  width: 90px;
+}
+
+.btn_log:hover {
+  background-color: var(--background-color);
+  color: var(--third-color);
+}
