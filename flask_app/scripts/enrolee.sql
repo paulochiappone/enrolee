@@ -17,6 +17,8 @@ USE `enrolee` ;
 -- -----------------------------------------------------
 -- Table `enrolee`.`users`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `enrolee`.`users` ;
+
 CREATE TABLE IF NOT EXISTS `enrolee`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(200) NULL,
@@ -32,16 +34,19 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `enrolee`.`events`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `enrolee`.`events` ;
+
 CREATE TABLE IF NOT EXISTS `enrolee`.`events` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(250) NULL,
   `description` TEXT NULL,
   `host` VARCHAR(250) NULL,
-  `type` VARCHAR(150) NULL,
   `location` TEXT NULL,
+  `cost` VARCHAR(150) NULL,
   `date` DATETIME NULL,
   `time` TIME NULL,
   `registration` TEXT NULL,
+  `image` VARCHAR(150) NULL,
   `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_id` INT NOT NULL,
@@ -58,6 +63,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `enrolee`.`tags`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `enrolee`.`tags` ;
+
 CREATE TABLE IF NOT EXISTS `enrolee`.`tags` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NULL,
@@ -77,6 +84,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `enrolee`.`speakers`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `enrolee`.`speakers` ;
+
 CREATE TABLE IF NOT EXISTS `enrolee`.`speakers` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(150) NULL,
@@ -88,6 +97,30 @@ CREATE TABLE IF NOT EXISTS `enrolee`.`speakers` (
   PRIMARY KEY (`id`),
   INDEX `fk_speakers_events1_idx` (`event_id` ASC) VISIBLE,
   CONSTRAINT `fk_speakers_events1`
+    FOREIGN KEY (`event_id`)
+    REFERENCES `enrolee`.`events` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `enrolee`.`assistans_events`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `enrolee`.`assistans_events` ;
+
+CREATE TABLE IF NOT EXISTS `enrolee`.`assistans_events` (
+  `user_id` INT NOT NULL,
+  `event_id` INT NOT NULL,
+  PRIMARY KEY (`user_id`, `event_id`),
+  INDEX `fk_users_has_events_events1_idx` (`event_id` ASC) VISIBLE,
+  INDEX `fk_users_has_events_users1_idx` (`user_id` ASC) VISIBLE,
+  CONSTRAINT `fk_users_has_events_users1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `enrolee`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_users_has_events_events1`
     FOREIGN KEY (`event_id`)
     REFERENCES `enrolee`.`events` (`id`)
     ON DELETE NO ACTION

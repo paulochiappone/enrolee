@@ -8,25 +8,242 @@
       rel="stylesheet"
       href="{{url_for('static', filename = 'css/style.css')}}"
     />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>Enrolee</title>
   </head>
+  <!-- ====HEADER===== -->
+  <header class="header fixed_top">
+    <div class="container">
+      <h2 class="icon">Enrolee</h2>
+      <div class="btns_head">
+        <button class="btn_sign">
+          <a href="/signup" class="link_head_1">Sign Up</a>
+        </button>
+        <button class="btn_log">
+          <a href="/signup" class="link_head_2">Log In</a>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- =====Body===== -->
   <body>
-    <!-- ====HEADER===== -->
-    <header class="header">
-      <div class="container">
-        <h2 class="icon">Enrolee</h2>
-        <div class="btns_head">
-          <button class="btn_sign">
-            <a href="/register" class="link_head_1">Sign Up</a>
-          </button>
-          <button class="btn_log">
-            <a href="/login" class="link_head_2">Log In</a>
-          </button>
+    <!-- =====BIG CARD===== -->
+    <div class="wrapper">
+      <h2 class="slogan"><span class="typing"></span></h2>
+      <h4 class="slogan_des">
+        Join our community of learnes from all over the world and have access to
+        unforgettable events.
+      </h4>
+      <button class="btn_enroll">
+        <a href="/signup" class="link_head_2">Become an Enrolee Member</a>
+      </button>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- =======TAGS======= -->
+    <div class="tags_container">
+      <h3 class="second_titles">Enroll events happening this week</h3>
+      <div>
+        <ul class="btns_tags">
+          <li><button class="tags">Science</button></li>
+          <li><button class="tags">Technology</button></li>
+          <li><button class="tags">Philosophy</button></li>
+          <li><button class="tags">Engineering</button></li>
+          <li><button class="tags">Data Science</button></li>
+          <li><button class="tags">Sociology</button></li>
+          <li><button class="tags">Ux Design</button></li>
+          <li><button class="tags">Political Science</button></li>
+          <li><button class="tags">Web Development</button></li>
+          <li><button class="tags">Statistics</button></li>
+          <li><button class="tags">Business</button></li>
+          <li><button class="tags">Design</button></li>
+          <li><button class="tags">Sales</button></li>
+          <li><button class="tags">Cybersecuity</button></li>
+          <li><button class="tags">Mathematics</button></li>
+        </ul>
+      </div>
+      <!-- =======EVENTS CARDS======= -->
+      <div class="cards_container">
+        <div class="card_prev">
+          <div class="description_prev">
+            <a href="#" class="card_title_prev"
+              ><h5>Analyzing War in Ukraine</h5></a
+            >
+            <p class="host_prev">Pontificia Universidad Católica del Perú</p>
+          </div>
+          <img
+            class="img_prev"
+            src="{{url_for('static', filename='img/event1.png')}}"
+          />
+          <div class="time_data_prev">
+            <ul class="ul_prev">
+              <li class="location_prev">
+                <i class="uil uil-map-marker icon_prev"><span>Online</span></i>
+              </li>
+              <li class="date_prev">
+                <i class="uil uil-schedule icon_prev"
+                  ><span>March 29th, 2022</span></i
+                >
+              </li>
+            </ul>
+            <a href="#" class="link_enroll_prev">Enroll Now</a>
+          </div>
+        </div>
+        <div class="card_prev">
+          <div class="description_prev">
+            <a href="#" class="card_title_prev">
+              <h5>Unexpected lessons from the animal world</h5></a
+            >
+            <p class="host_prev">TED Talks</p>
+          </div>
+          <img
+            class="img_prev"
+            src="{{url_for('static', filename='img/event2.png')}}"
+          />
+          <div class="time_data_prev">
+            <ul class="ul_prev">
+              <li class="location_prev">
+                <i class="uil uil-map-marker icon_prev"><span>Online</span></i>
+              </li>
+              <li class="date_prev">
+                <i class="uil uil-schedule icon_prev"
+                  ><span>March 29th, 2022</span></i
+                >
+              </li>
+            </ul>
+            <a href="#" class="link_enroll_prev">Enroll Now</a>
+          </div>
+        </div>
+        <div class="card_prev">
+          <div class="description_prev">
+            <a href="#" class="card_title_prev"
+              ><h5>Advance Regression Techniques</h5></a
+            >
+
+            <p class="host_prev">Data Society of Atlanta</p>
+          </div>
+          <img
+            class="img_prev"
+            src="{{url_for('static', filename='img/event3.png')}}"
+          />
+          <div class="time_data_prev">
+            <ul class="ul_prev">
+              <li class="location_prev">
+                <i class="uil uil-map-marker icon_prev"><span>Online</span></i>
+              </li>
+              <li class="date_prev">
+                <i class="uil uil-schedule icon_prev"
+                  ><span>March 29th, 2022</span></i
+                >
+              </li>
+            </ul>
+            <a href="#" class="link_enroll_prev">Enroll Now</a>
+          </div>
+        </div>
+        <div class="card_prev">
+          <div class="description_prev">
+            <a href="#" class="card_title_prev"
+              ><h5>Intro to Software Engineering</h5></a
+            >
+            <p class="host_prev">APIAddicts Mexico</p>
+          </div>
+          <img
+            class="img_prev"
+            src="{{url_for('static', filename='img/event4.png')}}"
+          />
+          <div class="time_data_prev">
+            <ul class="ul_prev">
+              <li class="location_prev">
+                <i class="uil uil-map-marker icon_prev"><span>Online</span></i>
+              </li>
+              <li class="date_prev">
+                <i class="uil uil-schedule icon_prev"
+                  ><span>March 29th, 2022</span></i
+                >
+              </li>
+            </ul>
+            <a href="#" class="link_enroll_prev">Enroll Now</a>
+          </div>
         </div>
       </div>
-    </header>
-    <div class="container2"></div>
-
-    <script src="{{url_for('static', filename = 'js/index.js')}}"></script>
+      <div class="more_prev">
+        <a href="#" class="more">More Events +</a>
+      </div>
+    </div>
+    <!-- =======FOOTER=========== -->
+    <footer class="footer">
+      <div class="container_footer">
+        <div class="foot1">
+          <h3>Welcome Here</h3>
+          <p class="welcome_footer">
+            Hi, this website has been designed by me, Lino Cruz, as a part of my
+            portfolio projects, for more info, visit my website at
+            <a href="https://linocruz.github.io/my_web_page/" class="myweb"
+              >linocruz.com</a
+            >
+          </p>
+        </div>
+        <div class="foot2">
+          <h3>About the site</h3>
+          <p class="description_footer">
+            This site has been develop with HTML, CSS, JAVASCRIPT, several
+            plugins, and in the Backend, works with Python, Flask, Flash and
+            MySQL.<a
+              href="https://github.com/LinoCruz/enrolee"
+              class="code_footer"
+            >
+              Look the code here</a
+            >.
+          </p>
+        </div>
+        <div class="foot3">
+          <h3>Let's connect on</h3>
+          <ul class="ul_sm">
+            <li>
+              <i class="uil uil-linkedin"></i
+              ><a href="https://www.linkedin.com/in/lino-cruz-519597234/"
+                >Linkedin</a
+              >
+            </li>
+            <li>
+              <i class="uil uil-github"></i
+              ><a href="https://github.com/LinoCruz">GitHub</a>
+            </li>
+            <li>
+              <i class="uil uil-youtube"></i
+              ><a
+                href="https://www.youtube.com/channel/UCB_YFjDFb9vZ7QcarxmjGPw"
+                >Youtube</a
+              >
+            </li>
+            <li>
+              <i class="uil uil-discord"></i
+              ><a href="https://discord.gg/nvp8TfRK8h">Discord</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="final_footer">
+        <p>All rigths reserved <i class="uil uil-copyright"></i> 2022</p>
+      </div>
+    </footer>
+    <!-- -----SCRIPT TEXT ANIMATION----- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- ---- PRINCIPAL SCRIPT---- -->
+    <script src="{{url_for('static', filename = 'js/script.js')}}"></script>
   </body>
 </html>

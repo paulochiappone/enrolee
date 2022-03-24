@@ -17,15 +17,15 @@ class User:
         self.updated_at = data["updated_at"]
     
     @classmethod
-    def save(cls, formulario):
-        #formulario = {
+    def save(cls, data):
+        #data = {
         #     "first_name": "Elena",
         #     "last_name": "De Troya",
         #     "email": "elena@cd.com",
         #     "password": "91289128snkndsaajdyasdl"
         # }
         query = "INSERT INTO users (first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s)"
-        nuevoId = connectToMySQL('enrolee').query_db(query, formulario)
+        nuevoId = connectToMySQL('enrolee').query_db(query, data)
         return nuevoId
     
     @staticmethod
@@ -41,21 +41,21 @@ class User:
 
         #Validar que mi nombre sea mayor a 2 caracteres
         if len(formulario['first_name']) < 2:
-            flash('Nombre debe de tener al menos 2 caracteres', 'registro')
+            flash('Name must have at least 2 characters', 'registro')
             es_valido = False
         #Validar que mi apellido sea mayor a 2 caracteres
         if len(formulario['last_name']) < 2:
-            flash('Apellido debe de tener al menos 2 caracteres', 'registro')
+            flash('Last name must have at least 2 characters', 'registro')
             es_valido = False
         #Valido email con expresiones regulares #abc123@21msn.com ->NO te aceptaría a.com
         if not EMAIL_REGEX.match(formulario['email']):
-            flash('E-mail inválido', 'registro')
+            flash('Wrong email', 'registro')
             es_valido = False
         if len(formulario['password']) < 8:
-            flash('Contraseña debe tener al menos 8 caracteres', 'registro')
+            flash('Password must have at least 8 characters', 'registro')
             es_valido = False
         if formulario['password'] != formulario['confirm']:
-            flash('Contraseñas no coinciden', 'registro')
+            flash('Passwords do not match', 'registro')
             es_valido = False
         
         #Consulta si ya existe ese correo

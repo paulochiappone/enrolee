@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'css/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Sign Up</title>
+  </head>
+  <body class="signup_body">
+    <h2><a href="/" class="icon">Enrolee</a></h2>
+
+    <div class="container_signup">
+      <div class="registration">
+        <div class="title_signup">Registration</div>
+        <form action="/register" method="post">
+          <div class="user_details">
+            <div class="input_box">
+              <span class="details">First Name</span>
+              <input
+                type="text"
+                id="first_name"
+                placeholder="Enter your first name"
+                name="first_name"
+              />
+            </div>
+            <div class="input_box">
+              <span class="details">Last Name</span>
+              <input
+                type="text"
+                id="last_name"
+                placeholder="Enter your last name"
+                name="last_name"
+              />
+            </div>
+            <div class="input_box">
+              <span class="details">E-mail</span>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                name="email"
+              />
+            </div>
+            <div class="input_box">
+              <span class="details">Password</span>
+              <input
+                type="password"
+                id="password"
+                placeholder="Create a powerful password"
+                name="password"
+              />
+            </div>
+            <div class="input_box">
+              <span class="details">Confirm Password</span>
+              <input
+                type="password"
+                id="confirm_password"
+                placeholder="Confirm your password"
+                name="confirm"
+              />
+            </div>
+          </div>
+          <div class="btn_signup">
+            <input type="submit" value="Sign Up" />
+          </div>
+        </form>
+      </div>
+      <div class="login">
+        <div class="title_signup">
+          <h5 class="login_question">Already have an account?</h5>
+          <h4 class="login_title">Log In</h4>
+          <div class="alertMessage"></div>
+        </div>
+        <form action="/login" id="formLogin" method="post">
+          <div class="user_details">
+            <div class="input_box">
+              <span class="details">Email</span>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                name="email"
+              />
+            </div>
+            <div class="input_box">
+              <span class="details">Password</span>
+              <input
+                type="password"
+                id="password"
+                placeholder="Your password"
+                name="password"
+              />
+            </div>
+          </div>
+          <div class="btn_signup">
+            <input type="submit" value="Log In" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ----PRINCIPAL SCRIPT ---- -->
+    <script src="{{url_for('static', filename = 'js/script.js')}}"></script>
+  </body>
+</html>
