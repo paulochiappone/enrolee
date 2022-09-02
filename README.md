@@ -4,10 +4,17 @@ Enrolee is a platform that allows users to rate stores of their choice, and thro
 
 ## Details
 
-### Database design
-This design was made in MySQL Workbench
-<br/>
-<image src="https://i.ibb.co/vjPxbNR/enrolee-db.png" height="400"/>
+## Backend-devs:
+Paulo Nievas
+Lino
+
+## Frontend-devs:
+Raphael
+Pablo Chiappone
+Gabriel Torres
+Federico Suarez
+
+
 
 ### Arquitecture
 This is the generic arquitecture for a Flask Project.
