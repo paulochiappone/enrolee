@@ -1,6 +1,6 @@
 # Enrolee
 
-Enrolee is a project made with Python-Flask, that provides a simple way for students, faculty and staff to register for classes, conferences, workshops, lectures, study groups, and more. Students can search for courses, find out what they are enrolled in, sign up for them, and pay for them using their existing student accounts. Faculty and staff can create new events, invite students to participate, and track registrations.
+Enrolee is a platform that allows users to rate stores of their choice, and through artificial intelligence suggests other stores that may be to their liking.
 
 ## Details
 
@@ -19,7 +19,7 @@ To see all the wireframes and logic, please go here: [COMPLETE WIREFRAMES](https
 <br/>
 <image src="https://i.ibb.co/TPpXGxx/enrolee.png" height="400"/>
 
-## To Start the Project
+## Deploy Backend
 
 1. Clone it to your branch
 2. Download it to your local
@@ -38,5 +38,8 @@ Now, I'm trying to integrate filters for the search and improve the user account
 
 In the front end I used HTML, CSS and Javascript. In the backend I used Python-Flask and MySQL. 
 
+## Deploy Frontend
+1. NPM Install
+2. NPM Run Start
 
 
